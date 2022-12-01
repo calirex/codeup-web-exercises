@@ -94,6 +94,6 @@ for(let i = 0; i < 10; i++) {
 // 10
 // 5
 
-for (let i = 0; i < 10; i++) {
-    console.log('for loop iteration #' + i);
-    }
+for(let i = 100; i > 0 ; i -= 5){
+    console.log(i);
+}
