@@ -61,9 +61,14 @@ function isEven(num){
 // 88888888
 // 999999999
 
-// for (var i = 0; i < 10; i++) {
-//     console.log('for loop iteration #' + i);
-// }
+for(let i = 0; i < 10; i++) {
+    let numArray = [];
+    for(let j = 0; j < i; j++) {
+        numArray.push(i);
+    }
+    console.log(numArray.join(""));
+}
+
 //5
 // Create a for loop that uses console.log to create the output shown below.
 //
@@ -88,3 +93,7 @@ function isEven(num){
 // 15
 // 10
 // 5
+
+for (let i = 0; i < 10; i++) {
+    console.log('for loop iteration #' + i);
+    }
