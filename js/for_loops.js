@@ -31,15 +31,20 @@ function showMultiplicationTable(input) {
 // 199 is odd
 
 
-console.log(getRandomInt(20, 200));
+getRandomInt(20, 200);
 
 
 function getRandomInt(min, max) {
     for(let i = 0; i < 10; i++){
         min = Math.ceil(min);
         max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min);
+        let num = (Math.floor(Math.random() * (max - min) + min));
+        console.log(`The number ${num} is ${isEven(num)}`);
     }
+}
+
+function isEven(num){
+    return (num % 2 == 0) ? "even" : "odd";
 }
 
 //4
@@ -56,6 +61,9 @@ function getRandomInt(min, max) {
 // 88888888
 // 999999999
 
+// for (var i = 0; i < 10; i++) {
+//     console.log('for loop iteration #' + i);
+// }
 //5
 // Create a for loop that uses console.log to create the output shown below.
 //
@@ -80,6 +88,3 @@ function getRandomInt(min, max) {
 // 15
 // 10
 // 5
-
-
-//6
