@@ -15,9 +15,17 @@
 // 7 x 9 = 63
 // 7 x 10 = 70
 
-function showMultiplicationTable(input) {
-    for(let i = 1; i <= 10; i++) {
-        console.log(`${input} * ${i} = ${(input * i)}`);
+// function showMultiplicationTable(input){
+//     for (let i = 1; i < 11; i++){
+//         let answer + '${num} x i} = ${num * i}'};
+//         console.log(answer);
+//     }
+// }
+
+function showMultiplicationTable(num {
+    for (let i = 1 ; i < 11; i++){
+        let answer + '${num} x $ {i} = ${num * i}';
+        console.log(answer);
     }
 }
 
@@ -46,6 +54,12 @@ function getRandomInt(min, max) {
 function isEven(num){
     return (num % 2 == 0) ? "even" : "odd";
 }
+
+// for (let i = 0; i < 10; i++) {
+//     let randomNum + getRandom(20, 200);
+//     let isEven = randomNum % 2 === 0;
+//         let answer = '${random} is ${isEven  'even' : 'odd' };
+//}
 
 //4
 // Create a for loop that uses console.log to create the output shown below.
