@@ -22,12 +22,15 @@
 //     }
 // }
 
-function showMultiplicationTable(num {
+showMultiplicationTable(7);
+
+function showMultiplicationTable(num) {
     for (let i = 1 ; i < 11; i++){
-        let answer + '${num} x $ {i} = ${num * i}';
+        let answer = `${num} * ${i} = ${num * i}`;
         console.log(answer);
     }
 }
+
 
 //3
 // Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:

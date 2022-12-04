@@ -25,6 +25,9 @@ for(let i = 100; i >=5; i -= 5){
     console.log(i);
 }
 
+let getRandomNum = Math.floor(Math.random() * 50) + 50;
+console.log(`this is the random number ${getRandomNum}`);
+
 //Do while
 let conesToSell = getRandomNum(50, 100);
 do {
