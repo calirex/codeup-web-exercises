@@ -138,38 +138,56 @@
      */
 
     console.log(planets);
-
+// Mutation
     console.log('Adding "The Sun" to the beginning of the planets array.');
     planets.unshift('The Sun');
     console.log(planets);
 
-
+// Mutation
     console.log('Adding "Pluto" to the end of the planets array.');
     planets.push('Pluto');
     console.log(planets);
 
-
+// Mutation
     console.log('Removing "The Sun" from the beginning of the planets array.');
     planets.shift();
     console.log(planets);
 
-
+// Mutation
     console.log('Removing "Pluto" from the end of the planets array.');
     planets.pop();
     console.log(planets);
-
+// Mutation
     console.log('Finding and logging the index of "Earth" in the planets array.');
-    var index = planets.indexOf('Earth');
-    console.log(index);
-
+    console.log(planets.indexOf('Earth'));
+// Mutation
     console.log("Reversing the order of the planets array.");
+    planets.reverse();
     console.log(planets);
-    planets.sort().reverse();
-    console.log(planets);
-
+// Mutation
     console.log("Sorting the planets array.");
-    console.log(planets);
     planets.sort();
     console.log(planets);
 
 })();
+
+// let planetsBrString = planetsArray.join('<br>');
+// console.log(planetsBrString);
+// //
+// // its useful when added to an html document and you want the items of the string to run horizontally down the page like:
+// //     Mercury
+// //     Venus
+// //     Earth
+// //     Mars
+// //     Jupiter
+// //     Saturn
+// //     Uranus
+// //     Neptune
+// //
+//
+// let planetsUlString = `<ul><li>${planetsArray[0]}</li><li>${planetsArray[1]}</li><li>${planetsArray[2]}</li><li>${planetsArray[3]}</li>
+// <li>${planetsArray[4]}</li><li>${planetsArray[5]}</li><li>${planetsArray[6]}</li><li>${planetsArray[7]}</li></ul>`
+//
+//
+// console.log(planetsUlString);
+// document.write(planetsUlString);
