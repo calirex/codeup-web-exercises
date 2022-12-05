@@ -164,7 +164,12 @@
 
     console.log("Reversing the order of the planets array.");
     console.log(planets);
+    planets.sort().reverse();
+    console.log(planets);
 
-    // console.log("Sorting the planets array.");
-    // console.log(planets);
+    console.log("Sorting the planets array.");
+    console.log(planets);
+    planets.sort();
+    console.log(planets);
+
 })();
