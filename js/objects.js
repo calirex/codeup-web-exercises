@@ -150,6 +150,12 @@ console.log(person.sayHello())
 //      *      ...
 //      */
 
+let bookNum = 0;
+books.forEach(function(book){
+    console.log(`book # ${bookNum += 1}
+    title: ${book.title}
+    author: ${book.author.firstName} ${book.author.lastName}`)
+});
 
 
 
