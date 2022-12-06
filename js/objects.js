@@ -12,7 +12,6 @@
 //      *  > console.log(person.lastName) // "Sanchez"
 //      */
 // an example `person` object
-
 //}
 
 let person = {}
@@ -49,12 +48,27 @@ console.log(person.sayHello())
 //      * and console.log the relevant messages for each person
 //      */
 //
-//     // var shoppers = [
-//     //     {name: 'Cameron', amount: 180},
-//     //     {name: 'Ryan', amount: 250},
-//     //     {name: 'George', amount: 320}
-//     // ];
-//
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+shoppers.forEach(function (shopper){
+    let isDiscount = `Congrats you get $` + (shopper.amount * .12) + " off!";
+    let withDiscount = `You're new Total is $` + Number(shopper.amount - (shopper.amount * .12)).toFixed(2);
+    console.log(shopper.name);
+    console.log(`Your total is $${(shopper.amount).toFixed(2)}`);
+    if (shopper.amount > 200){
+        console.log(isDiscount);
+        console.log(withDiscount);
+    }
+})
+
+
+
+
+
 //     /** TODO:
 //      * Create an array of objects that represent books and store it in a
 //      * variable named `books`. Each object should have a title and an author
@@ -92,7 +106,27 @@ console.log(person.sayHello())
 //      *      ---
 //      *      ...
 //      */
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //     /**
 //      * Bonus:
 //      * - Create a function named `createBook` that accepts a title and author
