@@ -54,20 +54,24 @@ console.log(person.sayHello())
         {name: 'George', amount: 320}
     ];
 
-shoppers.forEach(function (shopper){
-    let isDiscount = `Congrats you get $` + (shopper.amount * .12) + " off!";
-    let withDiscount = `You're new Total is $` + Number(shopper.amount - (shopper.amount * .12)).toFixed(2);
-    console.log(shopper.name);
-    console.log(`Your total is $${(shopper.amount).toFixed(2)}`);
-    if (shopper.amount > 200){
-        console.log(isDiscount);
-        console.log(withDiscount);
-    }
-})
+// shoppers.forEach(function (shopper){
+//     let isDiscount = `Congrats you get $` + (shopper.amount * .12) + " off!";
+//     let withDiscount = `You're new Total is $` + Number(shopper.amount - (shopper.amount * .12)).toFixed(2);
+//     console.log(shopper.name);
+//     console.log(`Your total is $${(shopper.amount).toFixed(2)}`);
+//     if (shopper.amount > 200){
+//         console.log(isDiscount);
+//         console.log(withDiscount);
+//     }
+// })
 
-
-
-
+    shoppers.forEach(function (shopper){
+        if(shopper.amount > 200){
+            console.log(`${shopper.name} spent $${shopper.amount}, they receive a 12% discount, their new total is $${(shopper.amount * .88).toFixed(2)}.`);
+        } else {
+            console.log(`${shopper.name} spent $${shopper.amount}, they didn't spend enough to get a discount`);
+        }
+    })
 
 //     /** TODO:
 //      * Create an array of objects that represent books and store it in a
@@ -81,7 +85,46 @@ shoppers.forEach(function (shopper){
 //      * > console.log(books[0].author.firstName) // "Douglas"
 //      * > console.log(books[0].author.lastName) // "Adams"
 //      */
-//
+
+
+        const books = [
+            {
+               title: 'Goosebumbs',
+                author: {
+                   firstName: "R.L.",
+                    lastName: "Stine"
+                }
+            },
+            {
+                title: `Harry Potter`,
+                author: {
+                    firstName: `J.K`,
+                    lastName: `Rowling`,
+                }
+            },
+            {
+                title: `ABC's`,
+                author: {
+                    firstName: `Lil`,
+                    lastName: `Wayne`,
+                }
+            },
+            {
+                title: `Ninja Turtles`,
+                author: {
+                    firstName: `John`,
+                    lastName: `Conner`,
+                }
+            },
+            {
+                title: `Reading Rainbow`,
+                author: {
+                    firstName: `Donald`,
+                    lastName: `Trump`,
+                }
+            },
+        ];
+
 //     /**
 //      * TODO:
 //      * Loop through the books array and output the following information about

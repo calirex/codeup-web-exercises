@@ -2,7 +2,7 @@
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+    // var planetsArray;
 
     /**
      * TODO:
@@ -11,7 +11,8 @@
      * console.log planetsArray to check your work
      */
 
-    // console.log(planetsArray);
+    let planetsArray = planetsString.split("|");
+    console.log(planetsArray);
 
     /**
      * TODO:
@@ -24,4 +25,34 @@
      * string, and <li> tags around each planet.
      */
 
+    let planetsArrayBr = planetsArray.join("<br>");
+    console.log(planetsArrayBr);
+    document.write(planetsArrayBr);
+
+
+
+//    BONUS
+
+    let planetList = planetsArray.map(item => {
+        return '<li>' + item + '</li>';
+    })
+    let wrapDisplay = '<ul>' + planetList.join('') + '</ul>';
+
+    console.log(wrapDisplay);
+    document.write(wrapDisplay);
+
+    console.log(`<ul><li>${planetsArray.join('</li><li>')}</li></ul>`);
+
 })();
+
+
+
+
+
+
+
+
+
+
+
+
