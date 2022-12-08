@@ -52,7 +52,7 @@ console.log(person.sayHello())
 //      * and console.log the relevant messages for each person
 //      */
 //
-    var shoppers = [
+    let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
@@ -69,13 +69,24 @@ console.log(person.sayHello())
 //     }
 // })
 
-    shoppers.forEach(function (shopper){
-        if(shopper.amount > 200){
-            console.log(`${shopper.name} spent $${shopper.amount}, they receive a 12% discount, their new total is $${(shopper.amount * .88).toFixed(2)}.`);
-        } else {
-            console.log(`${shopper.name} spent $${shopper.amount}, they didn't spend enough to get a discount`);
-        }
-    })
+shoppers.forEach(function(shopper){
+    if(shopper.amount > 200){
+        let savings = parseFloat(shopper.amount) *.12;
+        let total = parseFloat(shopper.amount) - (savings);
+        console.log(`${shopper.name} has a bill of ${shopper.amount.toLocaleString('en-US', {style:'currency', currency: 'USD'})}, and received a 12% discount.\n ${shopper.name}'s discounted total is $${total}, with savings of $${savings}`);
+    } else {
+        let remaining = 200 - parseFloat(shopper.amount);
+        console.log(`${shopper.name} has a bill of ${shopper.amount}`);
+    }
+});
+
+    // shoppers.forEach(function (shopper){
+    //     if(shopper.amount > 200){
+    //         console.log(`${shopper.name} spent $${shopper.amount}, they receive a 12% discount, their new total is $${(shopper.amount * .88).toFixed(2)}.`);
+    //     } else {
+    //         console.log(`${shopper.name} spent $${shopper.amount}, they didn't spend enough to get a discount`);
+    //     }
+    // })
 
 //     /** TODO:
 //      * Create an array of objects that represent books and store it in a
@@ -89,6 +100,7 @@ console.log(person.sayHello())
 //      * > console.log(books[0].author.firstName) // "Douglas"
 //      * > console.log(books[0].author.lastName) // "Adams"
 //      */
+
 
 
         const books = [
@@ -259,8 +271,21 @@ books.forEach(function(book){
 
 
 
+let author = "Fernando Rivera";
+let jasonbopok = createBook("Coding for Awesome People", " jason merril");
+function createBook(title, author){
+    let authorArray = author.split(` `); // ["jason Merril"]
+    let bookObject = {
+        title: title,
+        author: {
+            firstName: authorArray[0],
+            lastName: authorArray[1]
+    }
+    };
 
+    return bookObject;
 
+}
 
 
 
