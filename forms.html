@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test Form</title>
+    <title>Register With Us</title>
 </head>
+<h1>Register With Us</h1>
 <body>
-
 <main>
-
     <form method="POST" action="https://request-inspector.glitch.me/">
         <label for="username">Username</label>
         <input
@@ -21,11 +20,32 @@
         <input id="age" type="number" name="age" placeholder="Enter user age">
         <br>
         <button>Submit</button>
+    <h4>Biography</h4>
+    <textarea name="post" rows="4" cols="50" placeholder="BIO">Fill out a short description of yourself</textarea>
+    <br><br>
+        <label for="hear">How did you hear about us?</label>
+        <legend>Select Answer</legend>
+        <input id="a" type="radio" name="quiz_question_1" value="a">
+        <label for="a">Billboard</label>
+        <br>
+        <input id="b" type="radio" name="quiz_question_1" value="b">
+        <label for="b">Radio advertisement </label>
+        <br>
+        <input id="c" type="radio" name="quiz_question_1" value="c">
+        <label for="c">Internet advertisement</label>
+        <br>
+        <input id="d" type="radio" name="quiz_question_1" value="d">
+        <label for="d">Other</label>
+        <br><br>
+        <label for="webBrowser">What Web browser are you using?:</label>
+
+        <select name="webBrowser" id="webBrowser">
+            <option value="Chrome">Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Safari">Safari</option>
+            <option value="Other">Other</option>
+        </select>
+        <button>Submit</button>
     </form>
-
-
-    <!--  http://localhost:63342/zenith-web-exercises/test-form.html?username=jreich  -->
-</main>
-
 </body>
 </html>
