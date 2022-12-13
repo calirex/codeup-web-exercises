@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <title>Register With Us</title>
 </head>
-<h1>Register With Us</h1>
 <body>
+<h1>Register With Us</h1>
 <main>
     <form method="POST" action="https://request-inspector.glitch.me/">
-        <label for="username">Username</label>
-        <input
-                id="username"
-                name="username"
-                type="text"
-                placeholder="Enter username"
-                value="">
-        <br>
+        <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter Email">
+        </div>
+
+        <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password">
+        </div>
+
+<!--        <div>-->
+<!--        <label for="username">Username</label>-->
+<!--        <input-->
+<!--                id="username"-->
+<!--                name="username"-->
+<!--                type="text"-->
+<!--                placeholder="Enter username"-->
+<!--                value="">-->
+<!--            <div/>-->
+        <div>
         <label for="age">User age</label>
         <input id="age" type="number" name="age" placeholder="Enter user age">
-        <br>
+        </div>
         <button>Submit</button>
     <h4>Biography</h4>
     <textarea name="post" rows="4" cols="50" placeholder="BIO">Fill out a short description of yourself</textarea>
@@ -46,6 +58,12 @@
             <option value="Other">Other</option>
         </select>
         <button>Submit</button>
+        <br><br>
+        <input type="text" name="username" value="Want to sign up?" disabled>
+        <select name="newsletter_signup">
+            <option selected value="n">No</option>
+            <option selected value="y">Yes</option>
+        </select>
     </form>
 </body>
 </html>
