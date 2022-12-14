@@ -13,11 +13,12 @@ img{
 
 h2 {
     font-family: "Times New Roman";
-    color: red;
+    color: black;
     text-transform: uppercase;
+    text-shadow: 2px 2px black;
 }
 .section-header {
-    color:purple;
+    color:red;
 }
 
 .vision-image {
