@@ -1,0 +1,35 @@
+/*
+this file is named "site.css" and is in a directory named "css"
+*/
+body {
+    font-family: "Arial", sans-serif;
+}
+
+h2 {
+    font-family: "Times New Roman";
+    color: red;
+    text-transform: uppercase;
+}
+.section-header {
+    color:purple;
+}
+
+.vision-image {
+    color:purple;
+}
+
+#section-heading {
+    color:red;
+}
+
+.container-heading, #section-heading, {
+    font-size: 10px;
+}
+
+.container-heading:nth-child(even){
+    color:red;
+}
+
+#container h2{
+    color:red;
+}
