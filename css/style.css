@@ -2,7 +2,13 @@
 this file is named "site.css" and is in a directory named "css"
 */
 body {
+    background: url(/img/cinema.jpg);
     font-family: "Arial", sans-serif;
+}
+
+img{
+    border-radius: 40%;
+    border: 2px solid black;
 }
 
 h2 {
