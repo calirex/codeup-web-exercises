@@ -13,6 +13,8 @@ body, html {
     border-radius: 5px;
     height: 30px;
     padding: .25rem;
+    display: flex;
+    align-items: center;
 }
 
 .message-info{
