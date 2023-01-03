@@ -9,3 +9,7 @@
     opacity: .7;
     width: 100%
 }
+
+.list-group-flush {
+    margin-left: 10px;
+}
