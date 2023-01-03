@@ -42,11 +42,11 @@
             </a>
         </div>
     </nav>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-    </div>
+<!--    <div class="tab-content" id="myTabContent">-->
+<!--        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>-->
+<!--        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>-->
+<!--        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>-->
+<!--    </div>-->
     <div class="container">
     <div class="jumbotron d-flex justify-content-center align-items-center d-none d-md-flex">
         <div class="light-title d-flex justify-content-center align-items-center">
@@ -56,25 +56,46 @@
 </div>
 <div class="container">
     <h2>Build Your Own Pizza! </h2>
-    <div class="card text-center">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="true" href="#">Size and Crust</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cheese and Sauce</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Toppings</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><span class="badge bg-secondary">1</span> Size and Crust</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="badge bg-secondary">2</span> Cheese and Sauce</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><span class="badge bg-secondary">3</span> Toppings</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
     </div>
+    <div class="card">
+        <div class="card-header">
+            Hand Tossed
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Garlic season crust with a rich, buttery taste.</li>
+            <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Small (10")</label><br></li>
+            <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Medium (12")</label><br></li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Crispy Thin
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+            <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Small (10"</label><br></li>
+            <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Medium (12")</label><br></li>
+        </ul>
+    </div>
+
 </body>
 </html>
