@@ -1,0 +1,11 @@
+.jumbotron{
+    background-image: url("../img/background-image.png");
+    height: 346px;
+    background-size: cover;
+}
+
+.light-title{
+    background-color: white;
+    opacity: .7;
+    width: 100%
+}
