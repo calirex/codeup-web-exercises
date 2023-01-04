@@ -58,12 +58,12 @@
 //             age: 3
 //         }
 //     ]
-
+//
 // =======================================================================================================================
 // ================================= WARM UP
 //
 // Create a function, returnLongestPetName, that takes in a array of pet objects and returns a string of the longest name for a pet.
-
+//
 //     const pets = [
 //     {
 //         name: 'Sparky',
@@ -115,12 +115,12 @@
 // };
 //
 // console.log(returnLongestPetName(pets));
-
+//
 // Write a function, returnLastTwoChars that returns the last two characters of an input string. Assume a string input of at least two characters.
 // returnLastTwoChars(‘cat’) // returns ‘at’
 // returnLastTwoChars(‘hello’) // returns ‘lo’
 // returnLastTwoChars(‘hi’) // returns ‘hi’
-
+//
 // function returnLastTwoChars(input){
 //     return input.slice(-2);
 // }
@@ -146,12 +146,38 @@
 //     return str.split('').reverse().slice(0,noOfChars).join('');
 // }
 // Write a function, iBeforeE that takes in a string and returns the string with any ‘ei’ characters replaced with ‘ie’.
+//
+// function iBeforeE(string){
+//     let newString = string.replace(/ei/g, "ie");
+//     return newString;
+// }
+//
+// function iBeforeE (input){
+//     return input.replace("ei", "ie")
+// }
+//
+// Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// filterList([1,2,‘a’,‘b’]) // returns [1,2]
+// filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
+// filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
 
-function iBeforeE(string){
-    let newString = string.replace(/ei/g, "ie");
-    return newString;
-}
+// function filterList(list) {
+//     return list.filter(function(input) {
+//         return typeof input === 'number';
+//     });
+// }
+//
+// function filterList(input){
+//     let array = [];
+//     for(let i = 0; i < input.length; i++){
+//         if(typeof input[i] !== 'string'){
+//             // console.log(input[i]);
+//             array.push(input[i]);
+//         }
+//     }
+//     return array;
+// }
+// console.log(filterList([1, 2, "a", "b"]));
+// console.log(filterList([1,2,"aasf","1","123",123]));
 
-function iBeforeE (input){
-    return input.replace("ei", "ie")
-}
+
