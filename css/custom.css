@@ -13,3 +13,9 @@
 .list-group-flush {
     margin-left: 10px;
 }
+.navbar{
+    display: flex;
+    position: sticky !important;
+    top:0;
+    z-index: 100;
+}
