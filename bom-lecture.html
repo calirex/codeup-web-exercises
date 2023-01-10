@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOM Lecture</title>
+</head>
+<body>
+<h1>BOM Lecture</h1>
+
+<script>
+
+  "use strict";
+
+  /*
+      ================================= BROWSER OBJECT MODEL (BOM)
+
+      BOM = hierarchy of objects that make up the browser
+
+      Highest level object: window object
+
+      Main objects nested within the window object:
+
+          document  - a tree of elements of the current page
+          navigator - info about the browser itself
+          location  - info about the current url
+          history   - history of visited url with methods to traverse history
+          screen    - info about the current browser dimensions
+
+          additional information: https://www.w3schools.com/js/js_ex_browser.asp
+
+      Important methods within the window object:
+          Dialogue functions: alert(), confirm(), prompt()
+          setInterval() - starts an interval that can execute a repeated process
+          setTimeout() - starts a timer after which a process may execute
+
+      Location object:
+
+          Redirect to another page or reload the current page
+
+  */
+
+
+
+  /*
+      ================================= setInterval()
+
+      Set interval method:
+
+      Real world application:
+          slide show animation
+          music sequencer
+          AJAX requests
+
+      ** see example **
+  */
+
+  // function sayHello() {
+  //     console.log("Justin Reich");
+  // }
+  //
+  // var intervalId = setInterval(sayHello, 3000);
+
+
+
+  // create interval to say howdy 10 times
+
+  // var interval = 200;
+  // var i = 1;
+  //
+  // var intervalId = setInterval(function(){
+  //     if (i === 10) {
+  //         clearInterval(intervalId);
+  //     }
+  //     console.log("Howdy!!!");
+  //     ++i;
+  // }, interval);
+  //
+  // console.log(intervalId);
+
+
+  /*
+      ================================= setTimeout()
+
+          Real world application:
+
+          session time out (online banking)
+          pop up window  -  https://ambitionally.com/popupally/sample-time/
+  */
+
+
+  // create pop up ad after 3 seconds
+
+  // var x;
+  // var wait = 2000;
+  //
+  // var timeoutId = setTimeout(function() {
+  //     alert("You WON $1,000,000.00!!!!");
+  //     x = 23;
+  //     console.log("The value of x is: " + x);
+  // }, wait);
+
+
+  // asynchronous errors
+  //    console.log(x);
+
+
+
+
+  // ================================= Location object
+
+  // Redirect
+
+  // window.location = "https://www.google.com";
+
+
+  // Reload page
+
+  // location.reload();
+  // location.reload(true);
+
+  // getting all h1's on the page with getElementsByTagName('<htmltag>')
+  // ===================================================================
+  // const h1Elements = document.getElementsByTagName("h1"); // returns a collecion of HTML elements
+  // for (const element of h1Elements) {
+  //   console.log(element.textContent);
+  // }
+
+  // Get h1 with a specific ID
+  // ==========================
+  // const h1IdElement = document.getElementById("author");
+  // console.log(h1IdElement.textContent);
+
+  // Get h1 with class name
+  // ========================
+  // const h1ClassElements = document.getElementsByClassName("title"); // returns a collection of HTML elements
+  // for (const elements of h1ClassElements) {
+  //   console.log(elements.textContent);
+  // }
+
+  // One way to add content to the DOM
+  // =================================
+  // const divElement = document.getElementById("content");
+  // divElement.innerHTML += "<p>Content</p>";
+
+  // Another way to add elements to the DOM
+  // =======================================
+  // const divElement = document.getElementById("content");
+  // const newElem = document.createElement("p"); // creates a HTML element
+  // newElem.textContent = "This is new content"; // <p>this is new content</p>
+  // divElement.appendChild(newElem);
+
+  // Getting values of a form using querySelector('CSS SELECTOR')
+  // ============================================================
+  // const formUsernameElement = document.querySelector("input#username"); // ONLY returns the first instance of the specified css selector
+  // console.log(formUsernameElement.value);
+
+  // Getting values with querySelectorAll('CSS SELECTOR')
+  // ====================================================
+  // const allFormElements = document.querySelectorAll(".input-feild"); // returns a collection of html elements
+  // for (const element of allFormElements) {
+  //   console.log(element.value);
+  // }
+
+  // Adding/Removing attributes HTML elements
+  //=======================================================
+  // const searchLink = document.getElementById("search-link");
+  // const imageElement = document.getElementById("my_image"); // returns a collection
+  // console.log(searchLink.hasAttribute("href")); // returns bool
+  // console.log(searchLink.hasAttribute("class")); // returns bool
+  // console.log(imageElement.hasAttribute("alt"));
+
+  // Adding Attribute
+  // ===================
+  // searchLink.setAttribute("class", "search-button"); // class="search-button"
+  // imageElement.setAttribute("alt", "This is a place holder image");
+  // console.log(searchLink.hasAttribute("class")); // returns true after adding class
+  // console.log(searchLink); // displays the html element with class added
+  // console.log(imageElement.hasAttribute("alt"));
+  // console.log(imageElement);
+
+  // Removing Attribute
+  // ===================
+  // searchLink.removeAttribute("class");
+  // console.log(searchLink); // displays the element without the class name
+
+  // data-* attribute
+  // =================
+  // const listItems = document.getElementsByTagName("li");
+  // for (const item of listItems) {
+  //   console.log(item.getAttribute("data-dbid"));
+  // }
+
+</script>
+
+</body>
+</html></html>
+
