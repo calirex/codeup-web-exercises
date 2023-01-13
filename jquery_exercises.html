@@ -5,17 +5,39 @@
     <title>jquery_exercises</title>
 </head>
 <body>
+<div class="div-jquery">
+    <h1 class="codeup" id="codeup">BOOM</h1>
+    <p class="codeup" id="checkout"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut cum
+        deserunt distinctio dolores ducimus eum, expedita fugiat ipsam iste itaque nam quisquam quod repudiandae sunt
+        totam velit veniam.</p>
+    <ul id="gutter">Wow Furr Burgers</ul>
+    <li class="clown" id="clown">Qty1</li>
+</div>
+<script></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
-    "use strict";
+    //
+    // // Use jQuery to select an element by the id. Alert the contents of the element//
+    // let contents = $('#go-boom').html();
+    // alert(contents);
+    //
+    // // Update the jQuery code to select and alert a different id.//
+    // let contents = $('#gutter').html();
+    // alert(contents);
+    // // Use the same id on 2 elements. How does this change the jQuery selection? //
+    //
+    // // Remove the duplicate id. Each id should be unique on that page.//
 
-    $(function() {
+    // $('.codeup').css('border', 'solid 1px red')
+    // $("li").css("font-size", "20px");
+    // $('h1').css('background-color', 'yellow');
+    // $('p').css('background-color', 'yellow');
+    // $('li').css('background-color', 'yellow');
 
-        $(function() {
-            alert( 'I NEED A TUTOR!' );
-        });
+    let contents = $('h1').html();
+    alert(contents);
 
-    });
+    $("h1, p, li").css('background-color', 'yellow');
 </script>
 </body>
 </html>
