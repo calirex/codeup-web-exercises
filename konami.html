@@ -5,33 +5,39 @@
 </head>
 <body>
 <h1>Konami Code</h1>
-<div class="wrapper">
-    <div class="container">
-        <div class="column">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script>
-                "use strict";
+<script src="js/jquery-3.6.3.js"></script>
+<script>
 
-                $(document).keyup(function (event) {
-                    console.log(event.keyCode);
-                });
-                let allowedKeys = {
+    // ***** variables *****
+    let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 65, 65]
+    let userCode = [];
+    let btnPress;
 
-                    // a key map of allowed keys
-                    37: 'left',
-                    38: 'up',
-                    39: 'right',
-                    40: 'down',
-                    65: 'a',
-                    66: 'b',
-                    13: 'enter'
-                };
-                // the Konami Code sequence
-                let konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
+    // ***** functions *****
+    function test() {
+        userCode.forEach(function (num) {
+            if (userCode[num] === konamiCode[num] && userCode.length === konamiCode.length) {
+                alert(`You've added 30 lives!`)
+                userCode = [];
+            } else {
+                userCode = [];
+            }
+        })
+    }
 
-            </script>
-        </div>
-    </div>
-</div>
+    // ***** events *****
+    $(document).keyup(function (event) {
+        btnPress = event.keyCode;
+        if (btnPress === 13) {
+            console.log(`test`);
+            test();
+        } else {
+            userCode.push(btnPress);
+            console.log(btnPress);
+            console.log(userCode);
+        }
+    });
+</script>
+
 </body>
 </html>
