@@ -1,0 +1,15 @@
+dt {
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+dl {
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
+
+.highlight{
+    background-color: yellow;
+}
