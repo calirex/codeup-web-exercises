@@ -85,9 +85,105 @@
 
 // This loop should print the numbers from 0 through 9 in the console
 
-for (let i = 0; i < 10; i) {
-    console.log("The value of i is " + i);
-    i++;
+// for (let i = 0; i < 10; i) {
+//     console.log("The value of i is " + i);
+//     i++;
+// }
+//
+// // desired output : 0, 1 ,2,  3, 4, 5, 6, 7, 8, 9
+
+// let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 65, 65]
+// let konamiRev = konamiCode.reverse();
+// function returnLast (array){
+//     return array[array.length -1];
+// }
+// console.log(konamiCode);
+// console.log(returnLast(konamiCode), "65");
+//
+// // write me a function that takes in two arrays of numbers and returns the fourth indexed number from the first array times the sixth indexed number of the second array
+//
+// function twoArrays (arr1, arr2){
+//     console.log(arr1[3], arr2[5]);
+//     return arr1[3] * arr2[5];
+// }
+//
+// console.log(konamiCode, konamiRev);
+// console.log(twoArrays(konamiCode, konamiRev), '1480');
+
+// ================================= WARM UP
+
+// Write a function that takes a neighborhood object and determines if it is desirable. A neighborhood is desirable if the median home price is less than 300000, crime rates are low, and the total rating of schools is at least 24.
+
+// example data...
+
+function outcome (neighborhood){
+if ((neighborhood1, neighborhood2, neighborhood3 < 300000)) {        // logical condition
+    status = "Eligible.";               // executed if condition is true
+} else {                                // else block is optional
+    status = "Not eligible.";           // executed if condition is false
+}
 }
 
-// desired output : 0, 1 ,2,  3, 4, 5, 6, 7, 8, 9
+const neighborhood1 = {
+    neighborhood: "Lovely Estates",
+    medianHomePrice: 280000,
+    pool: true,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 6},
+        {name: "High School", rating: 8}
+    ]
+};
+
+const neighborhood2 = {
+    neighborhood: "Luminous Estates",
+    medianHomePrice: 270000,
+    pool: true,
+    tennis: false,
+    crimeRate: "high",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+}
+
+const neighborhood3 = {
+    neighborhood: "Oak Mountain",
+    medianHomePrice: 290000,
+    pool: false,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+}
+
+const neighborhood3 = {
+    neighborhood: "Ginormous Acres",
+    medianHomePrice: 350000,
+    pool: true,
+    tennis: true,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 9},
+        {name: "Middle School", rating: 9},
+        {name: "High School", rating: 9}
+    ]
+}
+
+fn(neighborhood1) // returns false due to school rating
+fn(neighborhood2) // returns false due to crime rate
+fn(neighborhood3) // returns true
+fn(neighborhood4) // returns false due to median home price
+
+
+
+
+
+
+
