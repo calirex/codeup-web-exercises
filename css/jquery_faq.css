@@ -13,3 +13,16 @@ dl {
 .highlight{
     background-color: yellow;
 }
+
+.invisible{
+    visibility: hidden;
+}
+section{
+    border: 2px solid black;
+}
+.fontBold{
+    font-weight: bold;
+}
+.blue{
+    color: blue;
+}
