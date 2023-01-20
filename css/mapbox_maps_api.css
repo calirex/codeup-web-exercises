@@ -1,0 +1,15 @@
+.page-wrapper{
+    background-color:#3B94D9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    flex-grow: 1;
+}
+
+#header-container {
+    color: white;
+    background-color: #3B94D9;
+}
