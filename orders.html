@@ -55,26 +55,41 @@
             "orderedBy": "Johnny Be Good"
         }
      */
-
     function createHTML(orders) {
       // loop through all the orders and create an HTML string for each order
       let html = '';
-      $.get(`./data/orders.json`).done(function(orders){
-
-        for (let i = 0; i < orders.length; i += 1) {
-          html += '    <article class="card">\n' +
-                  '        <h3>Order #' + orders[i].orderNumber + '</h3>\n' +
-                  '        <dl>\n' +
-                  '            <dt>Item Ordered</dt>\n' +
-                  '            <dd>' + orders[i].itemOrdered + '</dd>\n' +
-                  '            <dt>Ordered by</dt>\n' +
-                  '            <dd>' + orders[i].orderedBy + '</dd>\n' +
-                  '        </dl>\n' +
-                  '    </article>';
-        }
-        $(`#orders`).html(html);
-      })
-  }
+      for (let i = 0; i < orders.length; i += 1) {
+        html += '    <article class="cord card">\n' +
+                '        <h3>Order #' + orders[i].orderNumber + '</h3>\n' +
+                '        <dl>\n' +
+                '            <dt>Item Ordered</dt>\n' +
+                '            <dd>' + orders[i].itemOrdered + '</dd>\n' +
+                '            <dt>Ordered by</dt>\n' +
+                '            <dd>' + orders[i].orderedBy + '</dd>\n' +
+                '        </dl>\n' +
+                '    </article>';
+      }
+      return html;
+    }
+    // function createHTML(orders) {
+    //   // loop through all the orders and create an HTML string for each order
+    //   let html = '';
+    //   $.get(`./data/orders.json`).done(function(orders){
+    //
+    //     for (let i = 0; i < orders.length; i += 1) {
+    //       html += '    <article class="card">\n' +
+    //               '        <h3>Order #' + orders[i].orderNumber + '</h3>\n' +
+    //               '        <dl>\n' +
+    //               '            <dt>Item Ordered</dt>\n' +
+    //               '            <dd>' + orders[i].itemOrdered + '</dd>\n' +
+    //               '            <dt>Ordered by</dt>\n' +
+    //               '            <dd>' + orders[i].orderedBy + '</dd>\n' +
+    //               '        </dl>\n' +
+    //               '    </article>';
+    //     }
+    //     $(`#orders`).html(html);
+    //   })
+  // }
 
     /**
      * Triggers a new AJAX request to the orders.json file and re-renders the orders HTML using the createHTML function
