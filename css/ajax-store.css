@@ -1,0 +1,41 @@
+.page-wrapper{
+    min-height: 100vh;
+    background-color: cadetblue;
+
+}
+
+#header-container{
+    display: flex;
+    justify-content: center;
+    background-color: #aaaaaa;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+#products-container{
+    display: flex;
+    justify-content: center;
+    font-family: 'Unbounded', cursive;
+    margin-top: 20px;
+}
+
+.barlow-condensed{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+#load{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+#products{
+    border: 2px solid black;
+
+}
+
+th {
+    color: white;
+}
+/*font-family: 'Barlow Condensed', sans-serif;*/
+/*font-family: 'Unbounded', cursive;*/
