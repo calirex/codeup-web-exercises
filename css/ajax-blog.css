@@ -1,0 +1,22 @@
+/*ID TAGS*/
+#icon{
+    height: 50px;
+    width: auto;
+    color: darkgreen;
+}
+
+#header-text{
+    color: cadetblue;
+}
+
+#header-col {
+    border-bottom: 3px solid cadetblue;
+}
+
+/*CLASS TAGS*/
+
+
+/*FONTS TAGS*/
+.font1{
+    font-family: 'Caveat', cursive;
+}
