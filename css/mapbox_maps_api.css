@@ -1,3 +1,4 @@
+/*CLASS TAGS*/
 .page-wrapper{
     background-color:#3B94D9;
     min-height: 100vh;
@@ -5,6 +6,7 @@
     flex-direction: column;
 }
 
+/*ID TAGS*/
 #map {
     flex-grow: 1;
 }
