@@ -10,30 +10,57 @@ const map = new mapboxgl.Map({
 });
 
 
-// WEATHER DATA //
+// MARKER //
+let marker = new mapboxgl.Marker()
 
+function drag(){
+    let lnglat = marker.getLngLat();
+    console.log(lnglat)
 
-// $.get('https://api.openweathermap.org/data/2.5/forecast', {
-//     lat: 29.4252,
-//     lon: -98.4916,
-//     appid: keys.weatherKey,
-//     units: 'imperial'
-// }).done(function (data) {
-//     // can be used to get forecast conditions at current time in increments of 24 hours
-//     for (let i = 0; i < data.list.length; i += 8) {
-//         console.log(data.list[i])
-//         test.append(`${data.list[i].clouds.all}`)
-//     }
-// }).fail(function (jqXhr, status, error) {
-//     console.log(jqXhr);
-//     console.log(status);
-//     console.log(error);
-// });
+    map.flyTo({
+        center: [lnglat.lng, lnglat.lat],
+        essential: true
+    })
 
+    let html = "";
+
+    $.get(`https://api.openweathermap.org/data/2.5/forecast`,{
+        lat: lnglat.lat,
+        lon: lnglat.lng,
+        appid: keys.weatherKey,
+        units: `imperial`
+    }).done(pushData)
+}
+
+// PUSH DATA FUNCTION //
+function pushData(data) {
+    console.log(data)
+    let html = '';
+    // can be used to get forecast conditions at current time in increments of 24 hours
+    for (let i = 0; i < data.list.length; i += 8) {
+        console.log(data.list[i])
+        html += `<div class="card ms-2" style="width: 18rem;">
+                    <div class="card-header">
+                        ${data.list[i].dt_txt}
+                    </div>
+                    <div class="description ms-3">
+                    ${data.list[i].weather[0].description}
+</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Temp: ${data.list[i].main.temp}</li>
+                        <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
+                        <li class="list-group-item">Feels Like ${data.list[i].main.feels_like}</li>
+                        <li class="list-group-item">Max Temp ${data.list[i].main.temp_max}</li>
+                        <li class="list-group-item">Min Temp ${data.list[i].main.temp_min}</li>
+                        <li class="list-group-item">Pressure ${data.list[i].main.pressure}</li>
+                    </ul>
+                </div>`;
+    }
+    console.log(html);
+    $(`#cards`).html(html)
+}
 
 // SEARCH //
-
-
 $("#btn-search").click(function (event) {
     event.preventDefault()
 
@@ -52,32 +79,7 @@ $("#btn-search").click(function (event) {
             lon: lon,
             appid: keys.weatherKey,
             units: 'imperial'
-        }).done(function (data) {
-            console.log(data)
-            let html = '';
-            // can be used to get forecast conditions at current time in increments of 24 hours
-            for (let i = 0; i < data.list.length; i += 8) {
-                console.log(data.list[i])
-                html += `<div class="card ms-2" style="width: 18rem;">
-                    <div class="card-header">
-                        ${data.list[i].dt_txt}
-                    </div>
-                    <div class="description ms-3">
-                    ${data.list[i].weather[0].description}
-</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Temp: ${data.list[i].main.temp}</li>
-                        <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
-                        <li class="list-group-item">Feels Like ${data.list[i].main.feels_like}</li>
-                        <li class="list-group-item">Max Temp ${data.list[i].main.temp_max}</li>
-                        <li class="list-group-item">Min Temp ${data.list[i].main.temp_min}</li>
-                        <li class="list-group-item">Pressure ${data.list[i].main.pressure}</li>
-                    </ul>
-                </div>`;
-            }
-            console.log(html);
-            $(`#cards`).html(html)
-        }).fail(function (jqXhr, status, error) {
+        }).done((pushData)).fail(function (jqXhr, status, error) {
             console.log(jqXhr);
             console.log(status);
             console.log(error);
@@ -88,8 +90,11 @@ $("#btn-search").click(function (event) {
             essential: true
         })
 
-
+        marker.setLngLat([result[0], result[1]]).addTo(map);
+        marker.setDraggable(true);
     })
 
+    // EVENT LISTENER //
+    marker.on("dragend", drag);
 
 })
