@@ -22,19 +22,19 @@
 
 @keyframes backgroundColorPalette {
     0% {
-        color: rgba(72, 202, 228);
+        color: rgba(34, 87, 122);
     }
     25% {
-        color: rgba(2, 62, 138);
+        color: rgba(56, 163, 165);
     }
     50% {
-        color: rgba(0, 119, 182);
+        color: rgba(87, 204, 153);
     }
     75% {
-        color: rgba(0, 150, 199);
+        color: rgba(128, 237, 153);
     }
     100% {
-        color: rgba(0, 180, 216);
+        color: rgba(199, 249, 204);
     }
 }
 
