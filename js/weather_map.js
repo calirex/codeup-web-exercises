@@ -9,38 +9,87 @@ const map = new mapboxgl.Map({
     zoom: 12, // Starting zoom level
 });
 
+
 // WEATHER DATA //
 
-const test = $('.map-col')
-$.get('https://api.openweathermap.org/data/2.5/forecast', {
-    lat: 29.4252,
-    lon: -98.4916,
-    appid: keys.weatherKey,
-    units: 'imperial'
-}).done(function (data) {
-    // can be used to get forecast conditions at current time in increments of 24 hours
-    for (let i = 0; i < data.list.length; i += 8) {
-        console.log(data.list[i])
-        test.append(`${data.list[i].clouds.all}`)
-    }
-}).fail(function (jqXhr, status, error) {
-    console.log(jqXhr);
-    console.log(status);
-    console.log(error);
-});
 
+// $.get('https://api.openweathermap.org/data/2.5/forecast', {
+//     lat: 29.4252,
+//     lon: -98.4916,
+//     appid: keys.weatherKey,
+//     units: 'imperial'
+// }).done(function (data) {
+//     // can be used to get forecast conditions at current time in increments of 24 hours
+//     for (let i = 0; i < data.list.length; i += 8) {
+//         console.log(data.list[i])
+//         test.append(`${data.list[i].clouds.all}`)
+//     }
+// }).fail(function (jqXhr, status, error) {
+//     console.log(jqXhr);
+//     console.log(status);
+//     console.log(error);
+// });
 
 
 // SEARCH //
 
-$("#btn-search").click(function(event){
+
+$("#btn-search").click(function (event) {
     event.preventDefault()
 
-    geocode($(`#search-location`).val(),keys.mapbox).then(function(result){
+    let lon;
+    let lat;
+
+    geocode($(`#search-location`).val(), keys.mapbox).then(function (result) {
         console.log(result);
+        let lon = result[0];
+        let lat = result[1];
+        console.log(lon, result[0])
+        console.log(lat, result[1])
+        // API CALL //
+        $.get('https://api.openweathermap.org/data/2.5/forecast', {
+            lat: lat,
+            lon: lon,
+            appid: keys.weatherKey,
+            units: 'imperial'
+        }).done(function (data) {
+            console.log(data)
+            let html = '';
+            // can be used to get forecast conditions at current time in increments of 24 hours
+            for (let i = 0; i < data.list.length; i += 8) {
+                console.log(data.list[i])
+                html += `<div class="card ms-2" style="width: 18rem;">
+                    <div class="card-header">
+                        ${data.list[i].dt_txt}
+                    </div>
+                    <div class="description ms-3">
+                    ${data.list[i].weather[0].description}
+</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Temp: ${data.list[i].main.temp}</li>
+                        <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
+                        <li class="list-group-item">Feels Like ${data.list[i].main.feels_like}</li>
+                        <li class="list-group-item">Max Temp ${data.list[i].main.temp_max}</li>
+                        <li class="list-group-item">Min Temp ${data.list[i].main.temp_min}</li>
+                        <li class="list-group-item">Pressure ${data.list[i].main.pressure}</li>
+                    </ul>
+                </div>`;
+            }
+            console.log(html);
+            $(`#cards`).html(html)
+        }).fail(function (jqXhr, status, error) {
+            console.log(jqXhr);
+            console.log(status);
+            console.log(error);
+        });
+
         map.flyTo({
             center: [result[0], result[1]],
             essential: true
         })
+
+
     })
+
+
 })

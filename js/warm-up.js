@@ -120,66 +120,116 @@
 
 // Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
 
-function removeA2 (input){
-    let lowered = input.toLowerCase();
-    lowered = lowered.replaceAll('a', '@');
-    lowered = lowered.replaceAll('i', '1');
-    lowered = lowered.replaceAll('s', '$');
-    return lowered;
-}
-
-function encodeStr(str) {
-    let encodedStr = '';
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i];
-        if (char === 'a') {
-            encodedStr += '1';
-        } else if (char === 'e') {
-            encodedStr += '2';
-        } else if (char === 'i') {
-            encodedStr += '3';
-        } else if (char === 'o') {
-            encodedStr += '4';
-        } else if (char === 'u') {
-            encodedStr += '5';
-        } else {
-            encodedStr += char;
-        }
-    }
-    return encodedStr;
-}
-
-/* ‘a’ or ‘A’ becomes ‘@’ */
-function encodeStr(str) {
-    let encodedStr = '';
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i];
-        if (char === 'a' || char === 'A') {
-            encodedStr += '@';
-        } else if (char === 'e') {
-            encodedStr += '2';
-        } else if (char === 'i') {
-            encodedStr += '3';
-        } else if (char === 'o') {
-            encodedStr += '4';
-        } else if (char === 'u') {
-            encodedStr += '5';
-        } else {
-            encodedStr += char;
-        }
-    }
-    return encodedStr;
-}
-
-// ‘a’ or ‘A’ becomes ‘@’
-// ‘i’ or ‘I’ becomes ‘1’
-// ‘s’ or ‘S’ becomes ‘$’
+// function removeA2 (input){
+//     let lowered = input.toLowerCase();
+//     lowered = lowered.replaceAll('a', '@');
+//     lowered = lowered.replaceAll('i', '1');
+//     lowered = lowered.replaceAll('s', '$');
+//     return lowered;
+// }
 //
-// encodeStr(‘apple’) // returns ‘@pple’
-// encodeStr(‘codeup’) // returns ‘codeup’
-// encodeStr(‘SASS’) // returns ‘$@$$’
-// encodeStr(‘bike’) // returns ‘b1ke’
+// function encodeStr(str) {
+//     let encodedStr = '';
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i];
+//         if (char === 'a') {
+//             encodedStr += '1';
+//         } else if (char === 'e') {
+//             encodedStr += '2';
+//         } else if (char === 'i') {
+//             encodedStr += '3';
+//         } else if (char === 'o') {
+//             encodedStr += '4';
+//         } else if (char === 'u') {
+//             encodedStr += '5';
+//         } else {
+//             encodedStr += char;
+//         }
+//     }
+//     return encodedStr;
+// }
+//
+// /* ‘a’ or ‘A’ becomes ‘@’ */
+// function encodeStr(str) {
+//     let encodedStr = '';
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i];
+//         if (char === 'a' || char === 'A') {
+//             encodedStr += '@';
+//         } else if (char === 'e') {
+//             encodedStr += '2';
+//         } else if (char === 'i') {
+//             encodedStr += '3';
+//         } else if (char === 'o') {
+//             encodedStr += '4';
+//         } else if (char === 'u') {
+//             encodedStr += '5';
+//         } else {
+//             encodedStr += char;
+//         }
+//     }
+//     return encodedStr;
+// }
+//
+// // ‘a’ or ‘A’ becomes ‘@’
+// // ‘i’ or ‘I’ becomes ‘1’
+// // ‘s’ or ‘S’ becomes ‘$’
+// //
+// // encodeStr(‘apple’) // returns ‘@pple’
+// // encodeStr(‘codeup’) // returns ‘codeup’
+// // encodeStr(‘SASS’) // returns ‘$@$$’
+// // encodeStr(‘bike’) // returns ‘b1ke’
 
+// Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
+
+function reverseStrings(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].str = array[i].str.split('').reverse().join('');
+
+        return str;
+
+    }
+}
+
+    const strs = [
+    {
+        id: 1,
+        str: 'hello'
+    },
+    {
+        id: 2,
+        str: 'world'
+    },
+    {
+        id: 3,
+        str: 'codeup'
+    },
+    {
+        id: 4,
+        str: 'x'
+    }
+]
+
+// reverseStrings(strs) // returns...
+//
+//     [
+//     {
+//         id: 1,
+//         str: 'olleh'
+//     },
+//         {
+//             id: 2,
+//             str: 'dlrow'
+//         },
+//         {
+//             id: 3,
+//             str: 'puedoc'
+//         },
+//         {
+//             id: 4,
+//             str: 'x'
+//         }
+//     ]
 
 
 

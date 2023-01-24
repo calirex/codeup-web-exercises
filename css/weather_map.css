@@ -18,11 +18,25 @@
     background-image: url("../img/planet.jpg");
     font-family: 'Coiny', cursive;
 }
+/*#background-video {*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    object-fit: cover;*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    z-index: -1;*/
+/*}*/
 
 #nav {
     box-shadow: 2px 4px 20px 4px #ffffffd9 !important;
     font-family: 'Coiny', cursive;
     text-shadow: 2px 2px cadetblue;
+    background-image: url("../img/clouds-white.jpg");
+    /*background-image: url("");*/
+    background-size: cover;
 
 }
 
