@@ -1,6 +1,6 @@
 /*ID TAGS*/
 #cloud-icon {
-    height: 70px;
+    height: 80px;
     width: auto;
     color: teal;
 }
@@ -22,19 +22,19 @@
 
 @keyframes backgroundColorPalette {
     0% {
-        color: rgba(34, 87, 122);
+        color: rgba(51, 102, 153);
     }
     25% {
-        color: rgba(56, 163, 165);
+        color: rgba(134, 187, 216);
     }
     50% {
-        color: rgba(87, 204, 153);
+        color: rgba(47, 72, 88);
     }
     75% {
-        color: rgba(128, 237, 153);
+        color: rgba(243, 222, 44);
     }
     100% {
-        color: rgba(199, 249, 204);
+        color: rgba(255, 123, 0);
     }
 }
 

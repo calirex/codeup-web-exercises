@@ -73,6 +73,7 @@ $("#btn-search").click(function (event) {
         let lat = result[1];
         console.log(lon, result[0])
         console.log(lat, result[1])
+
         // API CALL //
         $.get('https://api.openweathermap.org/data/2.5/forecast', {
             lat: lat,
